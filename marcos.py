@@ -44,5 +44,17 @@ async def tweet(ctx):
 async def dm(ctx):
     await client.say('```!!dm @user <text>```')
     
+    
+@client.event
+async def on_message(message):
+    if ('fuck you') in message.content:
+        await client.delete_message(message)
+    if ('bitch') in message.content:
+        await client.delete_message(message)
+    if ('Fuck you') in message.content:
+        await client.delete_message(message)
+    if ('Buck you') in message.content:
+        await client.delete_message(message)    
+    
 
 client.run(os.getenv('Token'))
