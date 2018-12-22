@@ -49,12 +49,17 @@ async def dm(ctx):
 async def on_message(message):
     if ('fuck you') in message.content:
         await client.delete_message(message)
+        await client.say('not allowed')
     if ('bitch') in message.content:
         await client.delete_message(message)
+        await client.say('not allowed')
     if ('Fuck you') in message.content:
         await client.delete_message(message)
+        await client.say('not allowed')
     if ('Buck you') in message.content:
-        await client.delete_message(message)    
+        await client.delete_message(message)
+        await client.say('not allowed')
+   
     
 
 client.run(os.getenv('Token'))
