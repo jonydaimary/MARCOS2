@@ -38,8 +38,11 @@ def is_owner(ctx):
 
 @client.command(pass_context = True)
 async def tweet(ctx):
-    await client.say('```tweet <name> <text>```')
+    await client.say('```!!tweet <name> <text>```')
 
+@client.command(pass_context = True)
+async def dm(ctx):
+    await client.say('```!!dm @user <text>```')
     
 
 client.run(os.getenv('Token'))
