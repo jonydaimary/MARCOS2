@@ -36,15 +36,7 @@ def is_owner(ctx):
     return ctx.message.author.id == "498378677512437762"
 
 
-@client.command(pass_context = True)
-async def tweet(ctx):
-    await client.say('```!!tweet <name> <text>```')
 
-@client.command(pass_context = True)
-async def dm(ctx):
-    await client.say('```!!dm @user <text>```')
-    
-    
 @client.event
 async def on_message(message):
     if ('fuck you') in message.content:
